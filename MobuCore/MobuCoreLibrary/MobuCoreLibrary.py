@@ -100,7 +100,7 @@ def FindByName(name, includeWildcards = False, includeNamespace = True, sceneObj
                 SearchFiltering(obj, name, includeNamespace, includeWildcards, foundObjects)
     if len(foundObjects) == 0:
         pass
-        #print 'Search for "%s" found nothing' % (name)
+        #print('Search for "%s" found nothing' % (name))
     elif len(foundObjects) == 1 or returnSingleObj:
         foundObjects = foundObjects[0]            
     return foundObjects
@@ -152,7 +152,7 @@ The following functions is for adding branches to lists.
 # Support function for AddBranchToList.
 def AddBranchToListLoop(topModel, listOfObjs = []):
     for childModel in topModel.Children:
-        #print topModel.Name + ": " + childModel.Name 
+        #print(topModel.Name + ": " + childModel.Name)
         listOfObjs.append(childModel)
         AddBranchToListLoop(childModel, listOfObjs)
     return listOfObjs
